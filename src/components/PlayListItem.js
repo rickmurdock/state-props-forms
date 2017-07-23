@@ -5,7 +5,7 @@ export default class PlayListItem extends Component {
   render() {
     let songs = this.props.state.songs.map( e => {
       return(
-        <div className="col-sm-6">
+        // <div className="col-sm-6">
           <div key={e._id} className="card">
             <div className="card">
               <div className="card-block">
@@ -18,12 +18,15 @@ export default class PlayListItem extends Component {
               </div>
             </div>
           </div>
-        </div>
+        // </div>
       );
     });
     return(
-      <div className="row">
+      <div> 
+      <input type="submit" value="Update List"/>
+      <div className="col">
         {songs}
+      </div>
       </div>
     ) 
   }

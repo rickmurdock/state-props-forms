@@ -10,6 +10,15 @@ export default class PlayList extends Component {
     }
   }
 
+  fetchData = (e) => {
+    e.preventDefault();
+    fetch('https://tiny-lasagna-server.herokuapp.com/collections/playlisting').then(results => {
+      return results.json();
+    }).then(data => {
+      this.setState({songs: data});
+    })
+  }
+
   componentDidMount() {
     fetch('https://tiny-lasagna-server.herokuapp.com/collections/playlisting').then(results => {
       return results.json();
@@ -21,7 +30,7 @@ export default class PlayList extends Component {
   
   render() {
     return(
-      <div className="App">
+      <div className="App col-sm-6">
         <PlayListItem state={this.state}/>
       </div>
     );

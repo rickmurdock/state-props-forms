@@ -21,15 +21,13 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar />
-        <PlayListForm />
-        <PlayList />
-        {/*<div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+        <div className="row">
+          <PlayListForm userName={this.state.userName} 
+                        songArtist={this.state.songArtist} 
+                        songTitle={this.state.songTitle} 
+                        songNotes={this.state.songNotes}  />
+          <PlayList />
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>*/}
       </div>
     );
   }
