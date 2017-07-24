@@ -2,6 +2,12 @@
 
 In this project, you will work with using state, props, and forms to create an application that shares the song you are listening to or suggesting to other users.
 
+---
+
+View the finished project: https://rickmurdock.github.io/state-props-forms/
+
+---
+
 To help you with the AJAX request functionality, there are some functions to copy and paste included in the `tinylasagna.js` file in the `starter_files`.
 
 Inside of the `starter_files`, you'll find one file.
@@ -72,3 +78,5 @@ Be sure to add the corresponding methods or expressions to your component. Look 
 ## Results  
 
 When complete, your app should be fully functional and styled - here is a minimally styled example:
+
+![Mockup screen shot](https://github.com/rickmurdock/state-props-forms/blob/master/mockup.png)
