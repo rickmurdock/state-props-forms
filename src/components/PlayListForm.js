@@ -49,33 +49,36 @@ export default class PlayListForm extends Component {
     this.setState({userName: '', songNotes: '', songArtist: '', songTitle:''});
 
   };
+
   render() {
     return (
+     
       <div className="col-sm-6">
         <div className="text-left">
-          <div className="card">
+          {/*<div className="card">*/}
             <form onSubmit={this.addToList}>
-              <label>User Name: </label>
-              <br />
-              <input type="text" onChange={this.handleUserName} placeholder="Name or User Name" value={this.state.userName} required />
-              <br />
-              <label>Artist/Band: </label>
-              <br />
-              <input type="text" onChange={this.handleSongArtist} placeholder="Artist or Band Name" value={this.state.songArtist} />
-              <br />
-              <label>Song Title: </label>
-              <br />
-              <input type="text" onChange={this.handleSongTitle} placeholder="Song Title" value={this.state.songTitle} />
-              <br />
-              <label>Notes about Song: </label>
-              <br />
-              <input type="textarea" onChange={this.handleSongNotes} placeholder="" value={this.state.songNotes} />
-              <br />
-              <input type="submit"/>
+              <div className="form-group">
+                <label className="text-white" for="user-name">User Name:</label>
+                <input type="text" className="form-control" id="user-name" onChange={this.handleUserName} placeholder="Name or User Name" value={this.state.userName} required />
+              </div>
+              <div className="form-group">
+                <label className="text-white" for="song-artist">Artist/Band: </label>
+                <input type="text" className="form-control" id="song-artist" onChange={this.handleSongArtist} placeholder="Artist or Band Name" value={this.state.songArtist} required />
+              </div>  
+              <div className="form-group">
+                <label className="text-white" for="song-title">Song Title: </label>
+                <input type="text" className="form-control" id="song-title" onChange={this.handleSongTitle} placeholder="Song Title" value={this.state.songTitle} required />
+              </div>
+              <div className="form-group">
+                <label  className="text-white" for="song-notes">Notes about Song: </label>
+                <textarea className="form-control" rows="3" id="song-notes" onChange={this.handleSongNotes} placeholder="" value={this.state.songNotes} />
+              </div>
+              <input className="btn btn-primary" type="submit"/>
             </form>
-          </div>
+          {/*</div>*/}
         </div>
       </div>
+      
     )
   }
 }

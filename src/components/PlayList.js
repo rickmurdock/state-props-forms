@@ -31,7 +31,7 @@ export default class PlayList extends Component {
   render() {
     return(
       <div className="App col-sm-6">
-        <PlayListItem state={this.state}/>
+        <PlayListItem state={this.state} onClick={this.fetchData}/>
       </div>
     );
   }

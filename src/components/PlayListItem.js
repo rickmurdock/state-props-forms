@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 
 export default class PlayListItem extends Component {
-
+  constructor(props) {
+    super(props);
+  }
   render() {
     let songs = this.props.state.songs.map( e => {
       return(
@@ -23,10 +25,12 @@ export default class PlayListItem extends Component {
     });
     return(
       <div> 
-      <input type="submit" value="Update List"/>
-      <div className="col">
-        {songs}
-      </div>
+        <button type="button" className="btn btn-success" onClick={this.props.onClick}>Update List</button>
+        {/*<div className="card col">*/}
+          <div id="scroll-area" >
+          {songs}
+          </div>
+        {/*</div>*/}
       </div>
     ) 
   }

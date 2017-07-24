@@ -26,3 +26,25 @@
 body {
   background-color: teal;
 }
+
+/*button {
+  color: white;
+  background-color: green;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10;
+}*/
+
+.card {
+  margin: 10px;
+}
+
+#scroll-area {
+  height: 600px;
+  overflow-y: scroll;
+}
+
+.jumbotron {
+  padding: 20px;
+  height: 100px;
+}
