@@ -24,27 +24,20 @@
 }
 
 body {
-  background-color: teal;
+  background-color: #3D3D3D;
 }
 
-/*button {
-  color: white;
-  background-color: green;
-  border-radius: 10px;
-  padding: 10px;
-  margin-bottom: 10;
-}*/
-
 .card {
-  margin: 10px;
+  margin: 0 0 15px 0;
 }
 
 #scroll-area {
   height: 600px;
   overflow-y: scroll;
+  margin-top: 5px;
 }
 
 .jumbotron {
   padding: 20px;
-  height: 100px;
+  height: 120px;
 }

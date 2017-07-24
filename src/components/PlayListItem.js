@@ -1,5 +1,14 @@
 import React, { Component } from 'react';
 
+const divStyle = {
+  backgroundColor: '#70BBEB'
+}
+
+const styleWhite = {
+  color: 'white',
+  textShadow: '2px 2px #808080'
+}
+
 export default class PlayListItem extends Component {
   constructor(props) {
     super(props);
@@ -7,30 +16,23 @@ export default class PlayListItem extends Component {
   render() {
     let songs = this.props.state.songs.map( e => {
       return(
-        // <div className="col-sm-6">
-          <div key={e._id} className="card">
-            <div className="card">
-              <div className="card-block">
-                <ul className="list-group list-group-flush">
-                  <li className="list-group-item">User: {e.userName}</li>
-                  <li className="list-group-item">Artist/Band: {e.songArtist}</li>
-                  <li className="list-group-item">Title: {e.songTitle}</li>
-                  <li className="list-group-item">Notes: {e.songNotes}</li>
-                </ul>
-              </div>
-            </div>
+        <div key={e._id} className="card" style={divStyle} >
+          <div className="card-block">
+            <h5 className="card-text text-left"><span style={styleWhite}>User:</span> {e.userName}</h5>
+            <h5 className="card-text text-left"><span style={styleWhite}>Artist/Band:</span> {e.songArtist}</h5>
+            <h5 className="card-text text-left"><span style={styleWhite}>Title:</span> {e.songTitle}</h5>
+            <h5 className="card-text text-left"><span style={styleWhite}>Notes:</span> {e.songNotes}</h5>
           </div>
-        // </div>
+        </div>
       );
     });
     return(
       <div> 
-        <button type="button" className="btn btn-success" onClick={this.props.onClick}>Update List</button>
-        {/*<div className="card col">*/}
-          <div id="scroll-area" >
+        <button type="button" className="btn btn-success float-left" onClick={this.props.onClick}>Update List</button>
+        <br/><br/>
+        <div id="scroll-area" >
           {songs}
-          </div>
-        {/*</div>*/}
+        </div>
       </div>
     ) 
   }
